@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8" />
+
+	<!-- Set the viewport width to device width for mobile -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<title>Poker Hand Comparer</title>
+
+	<!-- Included CSS Files (Uncompressed) -->
+	<!--
+	<link rel="stylesheet" href="stylesheets/foundation.css">
+	-->
+
+	<!-- Included CSS Files (Compressed) -->
+	<link rel="stylesheet" href="stylesheets/foundation.min.css">
+	<link rel="stylesheet" href="stylesheets/app.css">
+	<link rel="stylesheet" href="stylesheets/style.css">
+	<script src="javascripts/modernizr.foundation.js"></script>
+</head>
+<body>
+<div class="row full-width">
+	<div class="six columns mobile-two">
+		<p class="promo">Built by <a href="http://janmilosh.com" target="_blank">Jan Milosh</a></p>
+	</div>
+	<div class="six columns mobile-two">
+		<p class="reset"><a href="#" onclick="reloadPage()">Refresh Page</a></p>
+	</div>
+</div>
+<div class="row">
+	<div class="twelve columns">
+		<h1>Poker Hand Comparer</h2>
+	</div>
+</div>
+<div class="row cards">
+	<div class="six columns">
+		<div class = "card-holder">
+			<img src = "images/back.png" alt = "playing card">
+			<img src = "images/back.png" alt = "playing card">
+			<img src = "images/back.png" alt = "playing card">
+			<img src = "images/back.png" alt = "playing card">
+			<img src = "images/back.png" alt = "playing card">
+			<p class = "results" >Player one: <span id = "your-hand"></span><span id = "your-hand-2"></span><span id = "your-rank"></span><span id = "your-suit"></span></p>
+			<p class = "results2" >Score: <span id = "your-win"></span><span id = "your-total"></span></p>
+		</div>
+	</div>
+	<div class="six columns">
+		<div class = "card-holder">
+			<img src = "images/back.png" alt = "playing card">
+			<img src = "images/back.png" alt = "playing card">
+			<img src = "images/back.png" alt = "playing card">
+			<img src = "images/back.png" alt = "playing card">
+			<img src = "images/back.png" alt = "playing card">
+			<p class = "results" >Player two: <span id = "my-hand"></span><span id = "my-hand-2"></span><span id = "my-rank"></span><span id = "my-suit"></span></p>
+			<p class = "results2" >Score: <span id = "my-win"></span><span id = "my-total"></span></p>
+		</div>
+	</div>
+</div>
+<div class="row">
+	<div class="twelve columns">
+		<h2 class = "deal-button"><a href = "#" onclick = "dealCards()" id = "deal-button">Deal and See Who Wins</a></h2>
+	</div>
+</div>
+<div class="row">
+	<div class="eight columns centered">
+	<p class = "about">This application is one of my JavaScript practice projects. The poker hands are dealt randomly and a new deck is used for each deal. The cards are evaluated and a result updated with each deal. The total number of wins is also updated and will return to zero if the page is refreshed.</p>
+	</div>
+</div>
+<!-- Included JS Files (Compressed) -->
+<script src="javascripts/foundation.min.js"></script>
+
+<!-- Initialize JS Plugins -->
+<script src="javascripts/app.js"></script>
+<script src="javascripts/jan.js"></script>
+
+  
+</body>
+</html>
